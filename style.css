@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Signika+Negative&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Itim", cursive;
+}
+
+nav {
+  height: 10vh;
+  background-color: rgb(78, 221, 114);
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+nav ul li {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+}
+
+.gameBox {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  position: relative;
+}
+
+.box {
+  border: 2px solid black;
+  font-size: 8vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover {
+  background-color: rgb(192, 192, 192);
+}
+
+.gameInfo {
+  padding: 0rem 2rem;
+}
+
+.imageBox img {
+  width: 0px;
+  transition: width 0.5s ease-in-out;
+}
+
+.bl {
+  border-left: 0px;
+}
+
+.br {
+  border-right: 0px;
+}
+
+.bt {
+  border-top: 0px;
+}
+
+.bb {
+  border-bottom: 0px;
+}
+
+.line {
+  height: 0.5vh;
+  width: 0vw;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  transition: width 1s ease-in;
+}
+
+#greet {
+  font-size: 6rem;
+}
+
+.info {
+  font-size: 3rem;
+}
+
+#reset {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  height: 4rem;
+  width: 6rem;
+  cursor: pointer;
+  margin: 0%;
+  font-size: 2rem;
+}
+
+#mainInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+#welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 500px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #greet{
+    font-size: 3rem;
+  }
+
+  .gameBox {
+    display: grid;
+    grid-template-rows: repeat(3, 15vw);
+    grid-template-columns: repeat(3, 15vw);
+    position: relative;
+  }
+
+  .box {
+    font-size: 10vw;
+  }
+}
